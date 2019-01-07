@@ -1,0 +1,31 @@
+type Post {
+  id: ID! @unique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  title: String!
+  published: Boolean! @default(value: "false")
+  author: User
+  comments: [Comment!]!
+}
+
+type User {
+  id: ID! @unique
+  name: String
+  email: String! @unique
+  role: Role! @default(value: "USER")
+  posts: [Post!]!
+  comments: [Comment!]!
+}
+
+type Comment {
+  id: ID! @unique
+  createdAt: DateTime!
+  text: String!
+  post: Post!
+  writtenBy: User!
+}
+
+enum Role {
+  USER
+  ADMIN
+}

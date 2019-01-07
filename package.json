@@ -1,0 +1,34 @@
+{
+  "name": "prisma-client-ts",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "prisma": "1.23.4",
+    "ts-node": "7.0.1",
+    "typescript": "3.2.2"
+  },
+  "dependencies": {
+    "graphql": "^14.0.2",
+    "graphql-yoga": "^1.16.1",
+    "prisma-client-lib": "1.23.4"
+  },
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "load-ids": "ts-node ./src/helpers/load-ids.ts",
+    "filtering-and-sorting": "ts-node ./src/reading-data/filtering-and-sorting.ts",
+    "fluent-api": "ts-node ./src/reading-data/fluent-api.ts",
+    "lists-and-single-objects": "ts-node ./src/reading-data/lists-and-single-objects.ts",
+    "pagination": "ts-node ./src/reading-data/pagination.ts",
+    "create-update-delete": "ts-node ./src/writing-data/create-update-delete.ts",
+    "upsert": "ts-node ./src/writing-data/upsert.ts",
+    "declarative-nested-write": "ts-node ./src/writing-data/declarative-nested-write.ts",
+    "batching": "ts-node ./src/writing-data/batching.ts",
+    "field-selection": "ts-node ./src/more-data-access/field-selection.ts",
+    "native-graphql": "ts-node ./src/more-data-access/native-graphql.ts",
+    "realtime-subscriptions": "ts-node ./src/more-data-access/realtime-subscriptions.ts",
+    "reset-all-data": "prisma reset -f && prisma seed"
+  },
+  "keywords": [],
+  "description": ""
+}
