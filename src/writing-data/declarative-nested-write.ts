@@ -31,12 +31,12 @@ async function main() {
     data: {
       author: {
         connect: {
-          email: "alice@prisma.io"
+          email: "ada@prisma.io"
         }
       }
     },
     where: {
-      id: "__POST_ID__" // replace with any post ID obtained from running `yarn load-ids`
+      id: "cjo5nvzz24rrz0a42gmhhi3rv"
     }
   });
   console.log(`Connected post to user: `, updatedPost);

@@ -13,9 +13,9 @@ async function main() {
   const allPosts: Post[] = await prisma.posts();
   console.log(allPosts);
 
-  // Fetch comment by ID
+  // Fetch user by ID
   const userById: User = await prisma.user({
-    id: "__USER_ID__" // replace with any user ID obtained from running `yarn load-ids`
+    id: "cjo5nvzyv4rry0a42xkyff6zc"
   });
   console.log(userById);
 

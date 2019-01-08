@@ -22,7 +22,7 @@ async function main() {
   // Fetch all comments that start with "Great" of a particular post
   const comments: Comment[] = await prisma
     .post({
-      id: "cjnymovvds3hy0a51xtxyhyh2" // replace with any post ID obtained from running `yarn load-ids`
+      id: "cjo5nvzz74rs30a4269qb2t2f"
     })
     .comments({
       where: {
@@ -38,4 +38,4 @@ async function main() {
   console.log(sortedPosts);
 }
 
-main();
+main()

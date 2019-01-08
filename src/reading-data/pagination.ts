@@ -27,14 +27,14 @@ async function main() {
   // Fetch the first 5 posts after a cursor
   const paginatedPosts3: Post[] = await prisma.posts({
     first: 5,
-    after: "__POST_ID__" // replace with any post ID obtained from running `yarn load-ids`
+    after: "cjo5nvzub4rrq0a42ptzqnq1b" // replace with any post ID obtained from running `yarn load-ids`
   });
   console.log(paginatedPosts3);
 
   // Fetch the last 5 posts before a cursor
   const paginatedPosts4: Post[] = await prisma.posts({
     last: 5,
-    before: "__POST_ID__" // replace with any post ID obtained from running `yarn load-ids`
+    before: "cjo5nvzub4rrq0a42ptzqnq1b" // replace with any post ID obtained from running `yarn load-ids`
   });
   console.log(paginatedPosts4);
 }

@@ -9,6 +9,7 @@ import {
   Model
 } from "prisma-client-lib";
 import { typeDefs } from "./prisma-schema";
+import { dummyServiceEndpoint } from "../../helpers/constants"
 
 export type AtLeastOne<T, U = { [K in keyof T]: Pick<T, K> }> = Partial<T> &
   U[keyof U];
@@ -1390,6 +1391,7 @@ export const models: Model[] = [
 export const Prisma = makePrismaClientClass<ClientConstructor<Prisma>>({
   typeDefs,
   models,
-  endpoint: `https://service-uiymbmtyca.now.sh/` // This is a dummy service with disabled mutations
+  endpoint: dummyServiceEndpoint // This is a dummy service with disabled mutations
 });
 export const prisma = new Prisma();
+export const writesDisabled = true

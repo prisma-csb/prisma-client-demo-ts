@@ -17,13 +17,13 @@ async function main() {
 
   // Retrieving all comments of a post
   const commentsOnPost: Comment[] = await prisma
-    .post({ id: "__POST_ID__" }) // replace with any post ID obtained from running `yarn load-ids`
+    .post({ id: "cjo5nvzz74rs30a4269qb2t2f" })
     .comments();
   console.log(commentsOnPost);
 
   // Retrieving the comments of a post author
   const commentsOfPostAuthor: Comment[] = await prisma
-    .post({ id: "__POST_ID__" }) // replace with any post ID obtained from running `yarn load-ids`
+    .post({ id: "cjo5nvzu84rro0a421cjk5mse" })
     .author()
     .comments();
   console.log(commentsOfPostAuthor);

@@ -1,22 +1,58 @@
-const description = `
-Welcome to the Prisma client explorer in CodeSandbox! 👋
+import * as inquirer from 'inquirer'
+import { exec } from 'child_process'
+import {
+  initialChoices,
+  readingChoices,
+  writingChoices,
+  moreChoices,
+} from './helpers/choices'
+import { checkWritesEnabled } from './helpers/checkWritesEnabled' 
 
-There are three folders with scripts that you can use to play around with the Prisma client API:
+async function main() {
 
-📖 src/reading-data
-✏️ src/writing-data (writes are disabled by default)
-⭐️ src/more-data-access 
+  const writesEnabled = await checkWritesEnabled()
 
-⚠️ IMPORTANT: Database writes are disabled by default! Please fork this CodeSandbox and use your own Prisma Demo server to perform database writes. Visit www.prisma.io/get-started to learn how to setup a Prisma Demo server.
+  const initialAnswer = await inquirer.prompt([
+    {
+      type: 'list',
+      name: 'theme',
+      message: 'Which part of the Prisma client API do you want to explore?',
+      choices: initialChoices,
+    },
+  ])
+  var finalChoices = []
+  if (initialAnswer.theme === initialChoices[0]) {
+    // Reading data
+    finalChoices = readingChoices
+  } else if (initialAnswer.theme === initialChoices[1]) {
+    // Writing data
+    if (!writesEnabled) {
+      console.log(`You need to fork this Sandbox and regenerate the Prisma client with your own database to perform writes. \nMore info here: TODO`)
+      process.exit()
+    }
+    finalChoices = writingChoices
+  } else if (initialAnswer.theme === initialChoices[2]) {
+    // More
+    console.log(`You need to fork this Sandbox and regenerate the Prisma client with your own database to explore these features. \nMore info here: TODO`)
+    process.exit()
+    finalChoices = moreChoices
+  } else {
+    console.error(`Choice not found`)
+    process.exit()
+  }
+  const finalAnswer = await inquirer.prompt([
+    {
+      type: 'list',
+      name: 'theme',
+      message: 'What do you want to do?',
+      choices: finalChoices,
+    },
+  ])
+  const command = `yarn ${finalAnswer.theme}`
+  console.log(`Run \$ ${command}`)
+  exec(command, (err, stdout) => {
+    console.log(stdout)
+  })
+}
 
-▶️ To run an example script, you need to use the embedded terminal here in CodeSandbox. 
-Click on "Terminal" below and then click the "+"-button to open a new terminal tab.
-In the new terminal tab, you can now run any example by running "yarn" followed by the name of the example, 
-e.g. "yarn create-update-delete" or "yarn upsert".
-
-🙋‍♀️ In some code snippets, you find placeholders looking like this "__USER_ID__" or "__POST_ID__". In order to run these snippets properly, you need to replace those placeholders with actual ID values. You can obtain these IDs by running: "yarn load-ids"
-
-PS. Feel free to hide the browser that CodeSandbox opens by default - you don't need it as you're just running terminal scripts.
-`;
-
-console.log(description);
+main()
