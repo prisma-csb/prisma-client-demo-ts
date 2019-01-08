@@ -28,8 +28,8 @@
     "field-selection": "ts-node ./src/more-data-access/field-selection.ts",
     "native-graphql": "ts-node ./src/more-data-access/native-graphql.ts",
     "realtime-subscriptions": "ts-node ./src/more-data-access/realtime-subscriptions.ts",
-    "reset-all-data": "prisma reset -f && prisma seed"
+    "reset-all-data": "prisma reset -f && prisma seed",
+    "prisma": "prisma"
   },
-  "keywords": [],
   "description": ""
 }
