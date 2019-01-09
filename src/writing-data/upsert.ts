@@ -1,7 +1,7 @@
 import { prisma, User } from '../generated/prisma-client'
 
 /**
- * ⚡️ Run `yarn upsert` to execute this script (or `yarn start` for more info).
+ * ⚡️ Run `yarn upsert` to execute this script (or `yarn start` for more choices).
  */
 
 async function main() {

@@ -1,7 +1,7 @@
 import { prisma } from '../generated/prisma-client'
 
 /**
- * ⚡️ Run `yarn realtime-subscriptions` to execute this script (or `yarn start` for more info).
+ * ⚡️ Run `yarn realtime-subscriptions` to execute this script (or `yarn start` for more choices).
  *
  * NOTE: To trigger a subscription, you need to perform a write-operation
  * (e.g. in another browser window or tab) while this script is running.

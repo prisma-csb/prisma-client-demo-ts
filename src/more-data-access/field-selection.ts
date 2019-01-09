@@ -1,7 +1,7 @@
 import { prisma } from '../generated/prisma-client'
 
 /**
- * ⚡️ Run `yarn field-selection` to execute this script (or `yarn start` for more info).
+ * ⚡️ Run `yarn field-selection` to execute this script (or `yarn start` for more choices).
  */
 
 async function main() {
