@@ -10,7 +10,7 @@ Run the following command to explore the Prisma client API:
 yarn start
 ```
 
-## Feature
+## Features
 
 There are three folders with scripts that you can use to play around with the Prisma client API:
 
