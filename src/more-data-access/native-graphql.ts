@@ -1,7 +1,7 @@
-import { prisma } from "../generated/prisma-client";
+import { prisma } from '../generated/prisma-client'
 
 /**
- * ⚡️Run `yarn native-graphql` to execute this script (or `yarn start` for more info).
+ * ⚡️ Run `yarn native-graphql` to execute this script (or `yarn start` for more info).
  */
 
 async function main() {
@@ -18,9 +18,9 @@ query {
     }
   }
 }
-`;
-  const postsWithAuthorAndComments: any = await prisma.$graphql(query);
-  console.log(`Query result: `, postsWithAuthorAndComments);
+`
+  const postsWithAuthorAndComments = await prisma.$graphql(query)
+  console.log(`Query result: `, postsWithAuthorAndComments)
 
   // Create a new user
   const mutation = `
@@ -31,11 +31,11 @@ mutation($email: String!) {
     id
   }
 }
-`;
+`
   // IF THIS FAILS, TRY CHANGING THE `email` (Prisma does't allow having two users with the same email in the DB)
-  const variables = { email: "bob@prisma.io" };
-  const newUser: any = await prisma.$graphql(mutation, variables);
-  console.log(`Mutation result: `, newUser);
+  const variables = { email: 'bob@prisma.io' }
+  const newUser = await prisma.$graphql(mutation, variables)
+  console.log(`Mutation result: `, newUser)
 }
 
-main();
+main()
