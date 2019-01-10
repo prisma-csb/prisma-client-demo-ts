@@ -5,9 +5,10 @@ import {
   moreChoices,
 } from './choices'
 import * as inquirer from 'inquirer'
+import { checkWritesEnabled } from './checkWritesEnabled'
 
-
-export async function determineScript(writesEnabled: Boolean) {
+export async function determineScript() {
+  const writesEnabled = await checkWritesEnabled()
 
   const initialAnswer = await inquirer.prompt([
     {
