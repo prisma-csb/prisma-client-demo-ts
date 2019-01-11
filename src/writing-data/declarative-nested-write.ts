@@ -5,6 +5,7 @@ import { prisma, User, Post } from '../generated/prisma-client'
  * 
  * ⚠️ This scripts uses hardcoded IDs. If you've set up your own demo database, you need to replace
  * them with real IDs from your database. Run `yarn load-ids` to retrieve a list of all IDs. 
+ * 
  */
 
 async function main() {
