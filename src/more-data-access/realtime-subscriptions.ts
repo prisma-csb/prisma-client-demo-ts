@@ -2,6 +2,10 @@ import { prisma } from '../generated/prisma-client'
 
 /**
  * ⚡️ Run `yarn realtime-subscriptions` to execute this script (or `yarn start` for more choices).
+ * 
+ * 💡 See https://github.com/prisma-csb/prisma-client-demo-ts/blob/master/SETUP.md for instructions
+ * how to fork this project and connect it to your own demo database.
+ * 
  *
  * NOTE: To trigger a subscription, you need to perform a write-operation
  * (e.g. in another browser window or tab) while this script is running.

@@ -3,7 +3,10 @@ import { prisma, User, Post } from '../generated/prisma-client'
 /**
  * ⚡️ Run `yarn declarative-nested-write` to execute this script (or `yarn start` for more choices).
  * 
- * ⚠️ This scripts uses hardcoded IDs. If you've set up your own demo database, you need to replace
+ * 💡 See https://github.com/prisma-csb/prisma-client-demo-ts/blob/master/SETUP.md for instructions
+ * how to fork this project and connect it to your own demo database.
+ * 
+ * ⚠️ This script uses hardcoded IDs. If you've set up your own demo database, you need to replace
  * them with real IDs from your database. Run `yarn load-ids` to retrieve a list of all IDs. 
  * 
  */
