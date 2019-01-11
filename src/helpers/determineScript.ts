@@ -26,13 +26,13 @@ export async function determineScript() {
   } else if (initialAnswer.theme === initialChoices[1]) {
     // Writing data
     if (!writesEnabled) {
-      console.log(`You need to fork this Sandbox and regenerate the Prisma client with your own database to perform writes. \nFind the setup instructions here: ${chalk.bold(`https://github.com/prisma-csb/prisma-client-demo-js/blob/master/SETUP.md`)}`)
+      console.log(chalk.red(`You need to fork this Sandbox and regenerate the Prisma client with your own database to perform writes. \nFind the setup instructions here: ${chalk.bold(`https://github.com/prisma-csb/prisma-client-demo-js/blob/master/SETUP.md`)}`))
       process.exit()
     }
     finalChoices = writingChoices
   } else if (initialAnswer.theme === initialChoices[2]) {
     // More
-    console.log(`You need to fork this Sandbox and regenerate the Prisma client with your own database to explore these features. \nFind the setup instructions here: ${chalk.bold(`https://github.com/prisma-csb/prisma-client-demo-js/blob/master/SETUP.md`)}`)
+    console.log(chalk.red(`You need to fork this Sandbox and regenerate the Prisma client with your own database to explore these features. \nFind the setup instructions here: ${chalk.bold(`https://github.com/prisma-csb/prisma-client-demo-js/blob/master/SETUP.md`)}`))
     process.exit()
     finalChoices = moreChoices
   } else {
