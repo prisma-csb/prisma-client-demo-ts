@@ -39,4 +39,4 @@ Run the following command to start exploring:
 yarn start
 ```
 
-**IMPORTANT**: Most of the scripts contain calls with hardcoded IDs (e.g. [here](./src/reading-data/fluent-api.ts#l16)). Once you've forked the project and connected it to your own demo database, these IDs won't be valid any more. You can run `$ yarn load-ids` to print a list of the new IDs that were generated for your project.
+**IMPORTANT**: Most of the scripts contain calls with hardcoded IDs (e.g. [here](./src/reading-data/fluent-api.ts#L16)). Once you've forked the project and connected it to your own demo database, these IDs won't be valid any more. You can run `$ yarn load-ids` to print a list of the new IDs that were generated for your project and replace the hardcoded ones.
