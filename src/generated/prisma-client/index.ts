@@ -1390,6 +1390,6 @@ export const models: Model[] = [
 export const Prisma = makePrismaClientClass<ClientConstructor<Prisma>>({
   typeDefs,
   models,
-  endpoint: `https://service-prisma-client-demo-igdstfonep.now.sh/` // This is a dummy service with disabled mutations
+  endpoint: `https://service-prisma-client-demo-netdwfzufl.now.sh/` // This is a dummy service with disabled mutations
 });
 export const prisma = new Prisma();
