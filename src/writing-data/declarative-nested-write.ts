@@ -2,6 +2,9 @@ import { prisma, User, Post } from '../generated/prisma-client'
 
 /**
  * ⚡️ Run `yarn declarative-nested-write` to execute this script (or `yarn start` for more choices).
+ * 
+ * ⚠️ This scripts uses hardcoded IDs. If you've set up your own demo database, you need to replace
+ * them with real IDs from your database. Run `yarn load-ids` to retrieve a list of all IDs. 
  */
 
 async function main() {
@@ -25,7 +28,7 @@ async function main() {
         connect: { email: 'alice@prisma.io' },
       },
     },
-    where: { id: 'cjnymow0as3i90a51muoz70zp' },
+    where: { id: 'cjnymow0as3i90a51muoz70zp' }, // HARDCODED ID (run `$ yarn load-ids` to find a replacement)
   })
   console.log(`Connected post to user: `, updatedPost)
 }

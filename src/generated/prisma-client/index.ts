@@ -19,7 +19,7 @@ export interface Exists {
   user: (where?: UserWhereInput) => Promise<boolean>;
 }
 
-export interface Node {}
+export interface Node { }
 
 export type FragmentableArray<T> = Promise<Array<T>> & Fragmentable;
 
@@ -182,7 +182,7 @@ export interface Subscription {
 }
 
 export interface ClientConstructor<T> {
-  new (options?: BaseClientOptions): T;
+  new(options?: BaseClientOptions): T;
 }
 
 /**
@@ -433,21 +433,21 @@ export interface PostUpdateManyWithWhereNestedInput {
 
 export interface CommentUpdateManyWithoutWrittenByInput {
   create?:
-    | CommentCreateWithoutWrittenByInput[]
-    | CommentCreateWithoutWrittenByInput;
+  | CommentCreateWithoutWrittenByInput[]
+  | CommentCreateWithoutWrittenByInput;
   delete?: CommentWhereUniqueInput[] | CommentWhereUniqueInput;
   connect?: CommentWhereUniqueInput[] | CommentWhereUniqueInput;
   disconnect?: CommentWhereUniqueInput[] | CommentWhereUniqueInput;
   update?:
-    | CommentUpdateWithWhereUniqueWithoutWrittenByInput[]
-    | CommentUpdateWithWhereUniqueWithoutWrittenByInput;
+  | CommentUpdateWithWhereUniqueWithoutWrittenByInput[]
+  | CommentUpdateWithWhereUniqueWithoutWrittenByInput;
   upsert?:
-    | CommentUpsertWithWhereUniqueWithoutWrittenByInput[]
-    | CommentUpsertWithWhereUniqueWithoutWrittenByInput;
+  | CommentUpsertWithWhereUniqueWithoutWrittenByInput[]
+  | CommentUpsertWithWhereUniqueWithoutWrittenByInput;
   deleteMany?: CommentScalarWhereInput[] | CommentScalarWhereInput;
   updateMany?:
-    | CommentUpdateManyWithWhereNestedInput[]
-    | CommentUpdateManyWithWhereNestedInput;
+  | CommentUpdateManyWithWhereNestedInput[]
+  | CommentUpdateManyWithWhereNestedInput;
 }
 
 export interface PostCreateOneWithoutCommentsInput {
@@ -473,8 +473,8 @@ export interface CommentUpdateWithoutWrittenByDataInput {
 
 export interface CommentCreateManyWithoutWrittenByInput {
   create?:
-    | CommentCreateWithoutWrittenByInput[]
-    | CommentCreateWithoutWrittenByInput;
+  | CommentCreateWithoutWrittenByInput[]
+  | CommentCreateWithoutWrittenByInput;
   connect?: CommentWhereUniqueInput[] | CommentWhereUniqueInput;
 }
 
@@ -709,15 +709,15 @@ export interface PostUpdateManyWithoutAuthorInput {
   connect?: PostWhereUniqueInput[] | PostWhereUniqueInput;
   disconnect?: PostWhereUniqueInput[] | PostWhereUniqueInput;
   update?:
-    | PostUpdateWithWhereUniqueWithoutAuthorInput[]
-    | PostUpdateWithWhereUniqueWithoutAuthorInput;
+  | PostUpdateWithWhereUniqueWithoutAuthorInput[]
+  | PostUpdateWithWhereUniqueWithoutAuthorInput;
   upsert?:
-    | PostUpsertWithWhereUniqueWithoutAuthorInput[]
-    | PostUpsertWithWhereUniqueWithoutAuthorInput;
+  | PostUpsertWithWhereUniqueWithoutAuthorInput[]
+  | PostUpsertWithWhereUniqueWithoutAuthorInput;
   deleteMany?: PostScalarWhereInput[] | PostScalarWhereInput;
   updateMany?:
-    | PostUpdateManyWithWhereNestedInput[]
-    | PostUpdateManyWithWhereNestedInput;
+  | PostUpdateManyWithWhereNestedInput[]
+  | PostUpdateManyWithWhereNestedInput;
 }
 
 export type PostWhereUniqueInput = AtLeastOne<{
@@ -735,15 +735,15 @@ export interface CommentUpdateManyWithoutPostInput {
   connect?: CommentWhereUniqueInput[] | CommentWhereUniqueInput;
   disconnect?: CommentWhereUniqueInput[] | CommentWhereUniqueInput;
   update?:
-    | CommentUpdateWithWhereUniqueWithoutPostInput[]
-    | CommentUpdateWithWhereUniqueWithoutPostInput;
+  | CommentUpdateWithWhereUniqueWithoutPostInput[]
+  | CommentUpdateWithWhereUniqueWithoutPostInput;
   upsert?:
-    | CommentUpsertWithWhereUniqueWithoutPostInput[]
-    | CommentUpsertWithWhereUniqueWithoutPostInput;
+  | CommentUpsertWithWhereUniqueWithoutPostInput[]
+  | CommentUpsertWithWhereUniqueWithoutPostInput;
   deleteMany?: CommentScalarWhereInput[] | CommentScalarWhereInput;
   updateMany?:
-    | CommentUpdateManyWithWhereNestedInput[]
-    | CommentUpdateManyWithWhereNestedInput;
+  | CommentUpdateManyWithWhereNestedInput[]
+  | CommentUpdateManyWithWhereNestedInput;
 }
 
 export interface PostUpdateWithoutAuthorDataInput {
@@ -844,7 +844,7 @@ export interface UserPreviousValues {
 
 export interface UserPreviousValuesPromise
   extends Promise<UserPreviousValues>,
-    Fragmentable {
+  Fragmentable {
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
   email: () => Promise<String>;
@@ -853,7 +853,7 @@ export interface UserPreviousValuesPromise
 
 export interface UserPreviousValuesSubscription
   extends Promise<AsyncIterator<UserPreviousValues>>,
-    Fragmentable {
+  Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
   email: () => Promise<AsyncIterator<String>>;
@@ -872,7 +872,7 @@ export interface CommentEdgePromise extends Promise<CommentEdge>, Fragmentable {
 
 export interface CommentEdgeSubscription
   extends Promise<AsyncIterator<CommentEdge>>,
-    Fragmentable {
+  Fragmentable {
   node: <T = CommentSubscription>() => T;
   cursor: () => Promise<AsyncIterator<String>>;
 }
@@ -915,7 +915,7 @@ export interface UserPromise extends Promise<User>, Fragmentable {
 
 export interface UserSubscription
   extends Promise<AsyncIterator<User>>,
-    Fragmentable {
+  Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
   email: () => Promise<AsyncIterator<String>>;
@@ -960,7 +960,7 @@ export interface PageInfoPromise extends Promise<PageInfo>, Fragmentable {
 
 export interface PageInfoSubscription
   extends Promise<AsyncIterator<PageInfo>>,
-    Fragmentable {
+  Fragmentable {
   hasNextPage: () => Promise<AsyncIterator<Boolean>>;
   hasPreviousPage: () => Promise<AsyncIterator<Boolean>>;
   startCursor: () => Promise<AsyncIterator<String>>;
@@ -973,13 +973,13 @@ export interface AggregateUser {
 
 export interface AggregateUserPromise
   extends Promise<AggregateUser>,
-    Fragmentable {
+  Fragmentable {
   count: () => Promise<Int>;
 }
 
 export interface AggregateUserSubscription
   extends Promise<AsyncIterator<AggregateUser>>,
-    Fragmentable {
+  Fragmentable {
   count: () => Promise<AsyncIterator<Int>>;
 }
 
@@ -990,7 +990,7 @@ export interface CommentConnection {
 
 export interface CommentConnectionPromise
   extends Promise<CommentConnection>,
-    Fragmentable {
+  Fragmentable {
   pageInfo: <T = PageInfoPromise>() => T;
   edges: <T = FragmentableArray<CommentEdge>>() => T;
   aggregate: <T = AggregateCommentPromise>() => T;
@@ -998,7 +998,7 @@ export interface CommentConnectionPromise
 
 export interface CommentConnectionSubscription
   extends Promise<AsyncIterator<CommentConnection>>,
-    Fragmentable {
+  Fragmentable {
   pageInfo: <T = PageInfoSubscription>() => T;
   edges: <T = Promise<AsyncIterator<CommentEdgeSubscription>>>() => T;
   aggregate: <T = AggregateCommentSubscription>() => T;
@@ -1011,7 +1011,7 @@ export interface UserConnection {
 
 export interface UserConnectionPromise
   extends Promise<UserConnection>,
-    Fragmentable {
+  Fragmentable {
   pageInfo: <T = PageInfoPromise>() => T;
   edges: <T = FragmentableArray<UserEdge>>() => T;
   aggregate: <T = AggregateUserPromise>() => T;
@@ -1019,7 +1019,7 @@ export interface UserConnectionPromise
 
 export interface UserConnectionSubscription
   extends Promise<AsyncIterator<UserConnection>>,
-    Fragmentable {
+  Fragmentable {
   pageInfo: <T = PageInfoSubscription>() => T;
   edges: <T = Promise<AsyncIterator<UserEdgeSubscription>>>() => T;
   aggregate: <T = AggregateUserSubscription>() => T;
@@ -1037,7 +1037,7 @@ export interface UserEdgePromise extends Promise<UserEdge>, Fragmentable {
 
 export interface UserEdgeSubscription
   extends Promise<AsyncIterator<UserEdge>>,
-    Fragmentable {
+  Fragmentable {
   node: <T = UserSubscription>() => T;
   cursor: () => Promise<AsyncIterator<String>>;
 }
@@ -1051,7 +1051,7 @@ export interface PostSubscriptionPayload {
 
 export interface PostSubscriptionPayloadPromise
   extends Promise<PostSubscriptionPayload>,
-    Fragmentable {
+  Fragmentable {
   mutation: () => Promise<MutationType>;
   node: <T = PostPromise>() => T;
   updatedFields: () => Promise<String[]>;
@@ -1060,7 +1060,7 @@ export interface PostSubscriptionPayloadPromise
 
 export interface PostSubscriptionPayloadSubscription
   extends Promise<AsyncIterator<PostSubscriptionPayload>>,
-    Fragmentable {
+  Fragmentable {
   mutation: () => Promise<AsyncIterator<MutationType>>;
   node: <T = PostSubscription>() => T;
   updatedFields: () => Promise<AsyncIterator<String[]>>;
@@ -1077,7 +1077,7 @@ export interface PostPreviousValues {
 
 export interface PostPreviousValuesPromise
   extends Promise<PostPreviousValues>,
-    Fragmentable {
+  Fragmentable {
   id: () => Promise<ID_Output>;
   createdAt: () => Promise<DateTimeOutput>;
   updatedAt: () => Promise<DateTimeOutput>;
@@ -1087,7 +1087,7 @@ export interface PostPreviousValuesPromise
 
 export interface PostPreviousValuesSubscription
   extends Promise<AsyncIterator<PostPreviousValues>>,
-    Fragmentable {
+  Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
@@ -1101,13 +1101,13 @@ export interface AggregatePost {
 
 export interface AggregatePostPromise
   extends Promise<AggregatePost>,
-    Fragmentable {
+  Fragmentable {
   count: () => Promise<Int>;
 }
 
 export interface AggregatePostSubscription
   extends Promise<AsyncIterator<AggregatePost>>,
-    Fragmentable {
+  Fragmentable {
   count: () => Promise<AsyncIterator<Int>>;
 }
 
@@ -1123,7 +1123,7 @@ export interface PostEdgePromise extends Promise<PostEdge>, Fragmentable {
 
 export interface PostEdgeSubscription
   extends Promise<AsyncIterator<PostEdge>>,
-    Fragmentable {
+  Fragmentable {
   node: <T = PostSubscription>() => T;
   cursor: () => Promise<AsyncIterator<String>>;
 }
@@ -1136,7 +1136,7 @@ export interface CommentPreviousValues {
 
 export interface CommentPreviousValuesPromise
   extends Promise<CommentPreviousValues>,
-    Fragmentable {
+  Fragmentable {
   id: () => Promise<ID_Output>;
   createdAt: () => Promise<DateTimeOutput>;
   text: () => Promise<String>;
@@ -1144,7 +1144,7 @@ export interface CommentPreviousValuesPromise
 
 export interface CommentPreviousValuesSubscription
   extends Promise<AsyncIterator<CommentPreviousValues>>,
-    Fragmentable {
+  Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
   text: () => Promise<AsyncIterator<String>>;
@@ -1159,7 +1159,7 @@ export interface CommentSubscriptionPayload {
 
 export interface CommentSubscriptionPayloadPromise
   extends Promise<CommentSubscriptionPayload>,
-    Fragmentable {
+  Fragmentable {
   mutation: () => Promise<MutationType>;
   node: <T = CommentPromise>() => T;
   updatedFields: () => Promise<String[]>;
@@ -1168,7 +1168,7 @@ export interface CommentSubscriptionPayloadPromise
 
 export interface CommentSubscriptionPayloadSubscription
   extends Promise<AsyncIterator<CommentSubscriptionPayload>>,
-    Fragmentable {
+  Fragmentable {
   mutation: () => Promise<AsyncIterator<MutationType>>;
   node: <T = CommentSubscription>() => T;
   updatedFields: () => Promise<AsyncIterator<String[]>>;
@@ -1191,7 +1191,7 @@ export interface CommentPromise extends Promise<Comment>, Fragmentable {
 
 export interface CommentSubscription
   extends Promise<AsyncIterator<Comment>>,
-    Fragmentable {
+  Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
   text: () => Promise<AsyncIterator<String>>;
@@ -1205,13 +1205,13 @@ export interface BatchPayload {
 
 export interface BatchPayloadPromise
   extends Promise<BatchPayload>,
-    Fragmentable {
+  Fragmentable {
   count: () => Promise<Long>;
 }
 
 export interface BatchPayloadSubscription
   extends Promise<AsyncIterator<BatchPayload>>,
-    Fragmentable {
+  Fragmentable {
   count: () => Promise<AsyncIterator<Long>>;
 }
 
@@ -1222,7 +1222,7 @@ export interface PostConnection {
 
 export interface PostConnectionPromise
   extends Promise<PostConnection>,
-    Fragmentable {
+  Fragmentable {
   pageInfo: <T = PageInfoPromise>() => T;
   edges: <T = FragmentableArray<PostEdge>>() => T;
   aggregate: <T = AggregatePostPromise>() => T;
@@ -1230,7 +1230,7 @@ export interface PostConnectionPromise
 
 export interface PostConnectionSubscription
   extends Promise<AsyncIterator<PostConnection>>,
-    Fragmentable {
+  Fragmentable {
   pageInfo: <T = PageInfoSubscription>() => T;
   edges: <T = Promise<AsyncIterator<PostEdgeSubscription>>>() => T;
   aggregate: <T = AggregatePostSubscription>() => T;
@@ -1245,7 +1245,7 @@ export interface UserSubscriptionPayload {
 
 export interface UserSubscriptionPayloadPromise
   extends Promise<UserSubscriptionPayload>,
-    Fragmentable {
+  Fragmentable {
   mutation: () => Promise<MutationType>;
   node: <T = UserPromise>() => T;
   updatedFields: () => Promise<String[]>;
@@ -1254,7 +1254,7 @@ export interface UserSubscriptionPayloadPromise
 
 export interface UserSubscriptionPayloadSubscription
   extends Promise<AsyncIterator<UserSubscriptionPayload>>,
-    Fragmentable {
+  Fragmentable {
   mutation: () => Promise<AsyncIterator<MutationType>>;
   node: <T = UserSubscription>() => T;
   updatedFields: () => Promise<AsyncIterator<String[]>>;
@@ -1291,7 +1291,7 @@ export interface PostPromise extends Promise<Post>, Fragmentable {
 
 export interface PostSubscription
   extends Promise<AsyncIterator<Post>>,
-    Fragmentable {
+  Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
@@ -1317,13 +1317,13 @@ export interface AggregateComment {
 
 export interface AggregateCommentPromise
   extends Promise<AggregateComment>,
-    Fragmentable {
+  Fragmentable {
   count: () => Promise<Int>;
 }
 
 export interface AggregateCommentSubscription
   extends Promise<AsyncIterator<AggregateComment>>,
-    Fragmentable {
+  Fragmentable {
   count: () => Promise<AsyncIterator<Int>>;
 }
 
@@ -1390,7 +1390,6 @@ export const models: Model[] = [
 export const Prisma = makePrismaClientClass<ClientConstructor<Prisma>>({
   typeDefs,
   models,
-  endpoint: `https://service-uiymbmtyca.now.sh/` // This is a dummy service with disabled mutations
+  endpoint: `https://service-prisma-client-demo-igdstfonep.now.sh/` // This is a dummy service with disabled mutations
 });
 export const prisma = new Prisma();
-export const writesDisabled = true
