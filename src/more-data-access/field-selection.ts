@@ -4,7 +4,7 @@ import { prisma } from '../generated/prisma-client'
  * ⚡️ Run `yarn field-selection` to execute this script (or `yarn start` for more choices).
  * 
  * 💡 See https://github.com/prisma-csb/prisma-client-demo-ts/blob/master/SETUP.md for instructions
- * to set up your own demo database.
+ * how to fork this project and connect it to your own demo database.
  * 
  */
 
