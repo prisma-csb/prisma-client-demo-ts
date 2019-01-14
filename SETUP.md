@@ -36,7 +36,7 @@ After `prisma deploy` has terminated, the Prisma client in `src/generated/prisma
 Run the following command to start exploring:
 
 ```
-yarn start
+yarn demo
 ```
 
 You can also run the scripts defined in [`package.json`](./package.json#L17) directly, e.g.:

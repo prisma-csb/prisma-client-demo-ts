@@ -2,7 +2,7 @@ import { determineScript } from './helpers/determineScript'
 import { execute } from './helpers/execute'
 
 /**
- * 🚀 Run `yarn start` to start exploring the API. 
+ * 🚀 Run `yarn demo` to start exploring the API. 
  * 
  * 💡 To explore all available features, fork the CodeSandbox and connect it to your own demo database.
  * Follow the instructions here: https://github.com/prisma-csb/prisma-client-demo-ts/blob/master/SETUP.md

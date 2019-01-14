@@ -15,7 +15,8 @@
     "prisma-client-lib": "1.23.4"
   },
   "scripts": {
-    "start": "ts-node ./src/index.ts",
+    "start": "ts-node ./src/helpers/info.ts",
+    "demo": "ts-node ./src/index.ts",
     "load-ids": "ts-node ./src/helpers/load-ids.ts",
     "filtering-and-sorting": "ts-node ./src/reading-data/filtering-and-sorting.ts",
     "fluent-api": "ts-node ./src/reading-data/fluent-api.ts",

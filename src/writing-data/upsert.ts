@@ -1,7 +1,7 @@
 import { prisma, User } from '../generated/prisma-client'
 
 /**
- * ⚡️ Run `yarn upsert` to execute this script (or `yarn start` for more choices).
+ * ⚡️ Run `yarn upsert` to execute this script (or `yarn demo` for more choices).
  * 
  * 💡 See https://github.com/prisma-csb/prisma-client-demo-ts/blob/master/SETUP.md for instructions
  * how to fork this project and connect it to your own demo database.

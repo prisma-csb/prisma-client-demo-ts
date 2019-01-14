@@ -17,7 +17,7 @@ There are three folders with scripts that you can use to play around with the Pr
 Once you have forked your own version of this CodeSandbox (see instructions [here](./SETUP.md)), you can start exploring the Prisma client API:
 
 ```
-yarn start
+yarn demo
 ```
 
 You can also directly run the scripts defined in [`package.json`](./package.json#L17), e.g.:
