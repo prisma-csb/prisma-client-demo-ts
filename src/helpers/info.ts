@@ -1,11 +1,19 @@
-import chalk from 'chalk'
+import * as express from 'express'
 
-const info = `
-💡  Please fork this CodeSandbox in order to run the examples.
+const app = express()
 
-👉  Follow the instructions here: ${chalk.bold(`https://github.com/prisma-csb/prisma-client-demo-ts/blob/master/SETUP.md`)}
-
-▶️  After you've forked the CodeSandbox and connected the Prisma client to your own demo database, run ${chalk.bold.blue(`$ yarn demo`)}
+const html = `
+<div>
+  <div>💡 Please fork this CodeSandbox in order to run the examples.</div>
+  <div>👉 <strong>Follow the instructions <a href="https://github.com/prisma-csb/prisma-client-demo-ts/blob/master/SETUP.md">here</a>.</strong></div>
+  <div>▶️ Once you're done, run <code>$ yarn demo</code> to get started.</div>
+</div>
 `
 
-console.log(info)
+app.get('/', (req, res) => {
+  res.send(html)
+})
+
+app.listen(3000, function() {
+  console.log('Server started on http://localhost:3000')
+})
