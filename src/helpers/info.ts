@@ -5,7 +5,7 @@ const app = express()
 const html = `
 <div>
   <div>💡 Please fork this CodeSandbox in order to run the examples.</div>
-  <div>👉 <strong>Follow the instructions <a href="https://github.com/prisma-csb/prisma-client-demo-ts/blob/master/SETUP.md" target="_blank">here</a>.</strong></div>
+  <div>👉 <strong>Follow the instructions on http://bit.ly/setup-prisma-client-demo-ts</strong></div>
   <div>▶️ Once you're done, run <code>$ yarn demo</code> to get started.</div>
 </div>
 `
