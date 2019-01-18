@@ -3,15 +3,11 @@ import * as express from 'express'
 const app = express()
 
 const html = `
-<html>
-<head>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.7.1/gist-embed.min.js"></script>
-</head>
-<body>
- <code data-gist-id="1bef06e6539ad9e7cbca0fa68384b2aa"></code>
-</body>
-</html>
+<div>
+  <div>💡 Please fork this CodeSandbox in order to run the examples.</div>
+  <div>👉 Follow the instructions on: <strong>http://bit.ly/setup-prisma-client-demo-ts</strong></div>
+  <div>▶️ Once you're done, run <code>$ yarn demo</code> to get started.</div>
+</div>
 `
 
 app.get('/', (req, res) => {
