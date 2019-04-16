@@ -1,25 +1,25 @@
 type Post {
-  id: ID! @unique
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
   title: String!
-  published: Boolean! @default(value: "false")
+  published: Boolean! @default(value: false)
   author: User
   comments: [Comment!]!
 }
 
 type User {
-  id: ID! @unique
+  id: ID! @id
   name: String
   email: String! @unique
-  role: Role! @default(value: "USER")
+  role: Role! @default(value: USER)
   posts: [Post!]!
   comments: [Comment!]!
 }
 
 type Comment {
-  id: ID! @unique
-  createdAt: DateTime!
+  id: ID! @id
+  createdAt: DateTime! @createdAt
   text: String!
   post: Post!
   writtenBy: User!
